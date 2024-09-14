@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { Image } from '@mui/icons-material';
+// import { Image } from '@mui/icons-material';
 
 const TestimonialsSection = () => {
     const testimonials = [
@@ -70,7 +70,7 @@ const TestimonialsSection = () => {
                             <p className="text-lg text-gray-700 mb-4">"{testimonial.text}"</p>
                             <h3 className="text-xl font-semibold mb-1">{testimonial.name}</h3>
                             <p className="text-sm text-gray-500 mb-4">{testimonial.position}</p>
-                            <Image 
+                            <img 
                                 src={testimonial.image} 
                                 alt={testimonial.name} 
                                 className="w-16 h-16 rounded-full object-cover"

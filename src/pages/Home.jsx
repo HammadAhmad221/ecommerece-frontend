@@ -13,7 +13,7 @@ import TestimonialsSection from '../components/TestimonalsSection';
 import InstaFeed from '../components/InstaFeed';
 import Footer from '../components/Footer';
 import { productDataList } from '../utils/products';
-import { Image } from '@mui/icons-material';
+// import { Image } from '@mui/icons-material';
 
 const Home = () => {
 
@@ -85,19 +85,19 @@ const Home = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-[65%] p-12">
             <div className="flex flex-col items-center">
-                    <Image src="/Low_Energy.avif" alt="Image 3" className="w-full h-48 object-cover rounded-lg mb-4" />
+                    <img src="/Low_Energy.avif" alt="img 3" className="w-full h-48 object-cover rounded-lg mb-4" />
                     <p className="text-lg font-semibold text-center">Low_Energy</p>
                 </div>
                 <div className="flex flex-col items-center">
-                    <Image src="/Brain_Fog.avif" alt="Image 2" className="w-full h-48 object-cover rounded-lg mb-4" />
+                    <img src="/Brain_Fog.avif" alt="img 2" className="w-full h-48 object-cover rounded-lg mb-4" />
                     <p className="text-lg font-semibold text-center">Brain Fog</p>
                 </div>
                 <div className="flex flex-col items-center">
-                    <Image src="/Headaches.avif" alt="Image 1" className="w-full h-48 object-cover rounded-lg mb-4" />
+                    <img src="/Headaches.avif" alt="img 1" className="w-full h-48 object-cover rounded-lg mb-4" />
                     <p className="text-lg font-semibold text-center">Headaches</p>
                 </div>
                 <div className="flex flex-col items-center">
-                    <Image src="Muscle_Cramps.avif" alt="Image 4" className="w-full h-48 object-cover rounded-lg mb-4" />
+                    <img src="Muscle_Cramps.avif" alt="img 4" className="w-full h-48 object-cover rounded-lg mb-4" />
                     <p className="text-lg font-semibold text-center">Muscle Cramps</p>
                 </div>
             </div>
@@ -110,7 +110,7 @@ const Home = () => {
                   <Slide products={productDataList} title="Products" />
 </div>
 <div className="w-full h-screen overflow-hidden mt-12">
-            <Image 
+            <img 
                 src="/one-shot.jpg" 
                 alt="Full Screen" 
                 className="w-full h-full object-cover"

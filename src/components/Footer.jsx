@@ -80,13 +80,13 @@ const Footer = () => {
             <h2 className="text-lg font-bold mb-4">Social Media</h2>
             <div className="flex space-x-4">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                <Image src="/insta.jfif" alt="Instagram" className="w-8 h-8" />
+                <img src="/insta.jfif" alt="Instagram" className="w-8 h-8" />
               </a>
               <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
-                <Image src="/tiktok.png" alt="TikTok" className="w-8 h-8" />
+                <img src="/tiktok.png" alt="TikTok" className="w-8 h-8" />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                <Image src="/linkedIn.jfif" alt="LinkedIn" className="w-8 h-8" />
+                <img src="/linkedIn.jfif" alt="LinkedIn" className="w-8 h-8" />
               </a>
             </div>
           </div>

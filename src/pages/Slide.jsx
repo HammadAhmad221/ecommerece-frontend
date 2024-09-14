@@ -1,4 +1,3 @@
-import { Image } from '@mui/icons-material';
 import { Divider } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -24,7 +23,7 @@ const Slide = ({ products, title }) => {
                 {products.map((product, index) => (
                     <Link key={index} to={`/product/view/${product._id}`} className="no-underline">
                         <div className="text-center p-4 bg-gray-100 rounded-lg">
-                            <Image src={product.productImage} alt={product.productName} className="rounded-lg w-full h-56 object-cover" />
+                            <img src={product.productImage} alt={product.productName} className="rounded-lg w-full h-56 object-cover" />
                             <h3 className="text-base font-semibold mt-2 text-gray-900 truncate">{product.productName}</h3>
                             <div className="flex gap-2 justify-center items-center mt-2">
                                 <p className="text-sm text-gray-500 line-through">{product.price.mrp}</p>

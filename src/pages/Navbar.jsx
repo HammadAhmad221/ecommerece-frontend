@@ -87,7 +87,7 @@ const Navbar = () => {
     };
 
     return (
-        <AppBar position="sticky" >
+        <AppBar position="sticky" sx={{ backgroundColor: "#111827" }}>
             <Container maxWidth="xl" sx={{ backgroundColor: "#111827" }} >
                 <Toolbar  disableGutters >
                     <HomeWrapper>
@@ -102,7 +102,7 @@ const Navbar = () => {
         aria-controls="menu-appbar"
         aria-haspopup="true"
         onClick={handleOpenDrawer}
-        color="inherit"
+        // color="#111827"
     >
         {/* <Typography variant="h6">Menu</Typography> */}
         <MenuIcon />
