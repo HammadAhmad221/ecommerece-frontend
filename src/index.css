@@ -2,17 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
+/* @import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css"; */
 * {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 a {
     text-decoration: none;
     color: inherit;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 p {
@@ -22,3 +22,10 @@ p {
 ::-webkit-scrollbar {
     display: none;
 }
+  
+  
+/* This will add the gap between the slides */
+.testimonial-slider .slick-slide {
+    padding: 0 10px; /* Adjust the value to control the gap */
+  }
+  
