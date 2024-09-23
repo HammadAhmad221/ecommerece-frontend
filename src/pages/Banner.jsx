@@ -24,10 +24,10 @@ const Banner = () => {
         <ImageWrapper key={image._id}>
           <Image src={image.url} alt={image.alt} />
           <TextOverlay>
-            <Heading>{image.heading}</Heading>
+            <h1 className="text-3xl hidden lg:block">{image.heading}</h1>
             <br />
-            <p className="text-2xl hidden sm:block mb-4">{image.text}</p>
-            <button className="border border-white rounded-lg px-4 py-2 text-white">
+            <p className="text-2xl hidden lg:block mb-4">{image.text}</p>
+            <button className="border border-white rounded-lg px-4 py-2 text-white hidden lg:block">
               Learn More
             </button>
           </TextOverlay>
@@ -92,15 +92,10 @@ const Image = styled("img")(({ theme }) => ({
 const TextOverlay = styled("div")`
   position: absolute;
   width: 50%;
-  bottom: 30%;
+  bottom: 10%;
   left: 20px;
   color: white;
   padding: 10px;
-`;
-
-const Heading = styled("h2")`
-  margin: 0;
-  font-size: 2rem;
 `;
 
 // import { styled } from '@mui/material';

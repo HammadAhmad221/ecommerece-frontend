@@ -7,7 +7,7 @@ const InstaFeed = () => {
 // class="snapwidget-widget" 
 allowtransparency="true" 
 frameBorder="0" scrolling="no" 
-style={{border:'none', overflow:'hidden', width:'80vw',height:'30vh'}} 
+style={{border:'none', overflow:'hidden', width:'80vw',height:'23vw'}} 
 title="Posts from Instagram"></iframe>
       </div>
         </div>

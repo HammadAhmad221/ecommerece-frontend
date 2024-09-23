@@ -1,45 +1,41 @@
-// import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // import React, { useState } from 'react';
 
 import { Box, Container, styled } from "@mui/material";
 import Slide from "./Slide";
 import Banner from "./Banner";
-// import { useDispatch, useSelector } from 'react-redux';
-// import { getProducts } from '../redux/userHandle';
-// import ProductsMenu from './customer/components/ProductsMenu';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProducts } from '../redux/userHandle';
+import ProductsMenu from './customer/components/ProductsMenu';
 import { NewtonsCradle } from "@uiball/loaders";
 import { Link } from "react-router-dom";
 import TestimonialsSection from "../components/TestimonalsSection";
 import InstaFeed from "../components/InstaFeed";
 import Footer from "../components/Footer";
 import { productDataList } from "../utils/products";
+import { CleaningServices } from '@mui/icons-material';
 // import { Image } from '@mui/icons-material';
 
 const Home = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  // const { productData, responseProducts, error } = useSelector((state) => state.user);
+  const { productData, responseProducts, error } = useSelector((state) => state.user);
 
-  // const [showNetworkError, setShowNetworkError] = useState(false);
+  const [showNetworkError, setShowNetworkError] = useState(false);
 
-  // remove when active back-end error and response
-  const error = false;
-  const responseProducts = false;
-  const showNetworkError = false;
+  useEffect(() => {
+    dispatch(getProducts());
+  }, [dispatch]);
 
-  // useEffect(() => {
-  //   dispatch(getProducts());
-  // }, [dispatch]);
+  useEffect(() => {
+    if (error) {
+      const timeoutId = setTimeout(() => {
+        setShowNetworkError(true);
+      }, 40000);
 
-  // useEffect(() => {
-  //   if (error) {
-  //     const timeoutId = setTimeout(() => {
-  //       setShowNetworkError(true);
-  //     }, 40000);
-
-  //     return () => clearTimeout(timeoutId);
-  //   }
-  // }, [error]);
+      return () => clearTimeout(timeoutId);
+    }
+  }, [error]);
 
   return (
     <div id="top">
@@ -77,29 +73,30 @@ const Home = () => {
           ) : (
             <>
               <div>
-                <Slide products={productDataList} title="Products" />
+                <Slide products={productData} title="Products" />
               </div>
-              <div className="w-full h-screen overflow-hidden mt-12">
-                <img
-                  src="/one-shot.jpg"
-                  alt="Full Screen"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="flex flex-col items-center justify-center p-20">
-                <h1 className="text-5xl font-bold mb-10">Why Choose 6Lytes?</h1>
-                <p className="text-2xl w-[60%] text-center">
-                  At 6Lytes, we are dedicated to merging health, performance,
-                  and wellness through innovation. Our mission is to keep you
-                  hydrated, energized, and prepared to tackle your day with
-                  ease. Our formulas are rooted in scientific research to ensure
-                  rapid absorption, effective hydration, and support for energy
-                  production, muscle recovery, and immune health. Whether you're
-                  a professional athlete or starting your wellness journey,
-                  6Lytes offers clean, efficient, and convenient solutions
-                  tailored to your needs.
-                </p>
-              </div>
+<div className="w-full h-full relative">
+    <img
+        src="/one-shot.jpg"
+        alt="Full Screen"
+        className="w-full h-full object-contain mt-12"
+    />
+</div>
+              <div className="flex flex-col items-center justify-center p-10 md:p-20">
+    <h1 className="text-3xl md:text-5xl sm:3xl font-bold mb-6">Why Choose 6Lytes?</h1>
+    <p className="text-lg md:text-2xl w-full md:w-[60%] text-center sm:lg">
+        At 6Lytes, we are dedicated to merging health, performance,
+        and wellness through innovation. Our mission is to keep you
+        hydrated, energized, and prepared to tackle your day with
+        ease. Our formulas are rooted in scientific research to ensure
+        rapid absorption, effective hydration, and support for energy
+        production, muscle recovery, and immune health. Whether you're
+        a professional athlete or starting your wellness journey,
+        6Lytes offers clean, efficient, and convenient solutions
+        tailored to your needs.
+    </p>
+</div>
+
               <TestimonialsSection className="px-28" />
               <InstaFeed />
               <Footer />

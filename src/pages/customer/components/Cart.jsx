@@ -33,8 +33,8 @@ const Cart = ({ setIsCartOpen }) => {
     };
 
     const totalQuantity = cartDetails.reduce((total, item) => total + item.quantity, 0);
-    const totalOGPrice = cartDetails.reduce((total, item) => total + (item.quantity * item.price.mrp), 0);
-    const totalNewPrice = cartDetails.reduce((total, item) => total + (item.quantity * item.price.cost), 0);
+    const totalOGPrice = cartDetails.reduce((total, item) => total + (item.quantity * item.price?.mrp), 0);
+    const totalNewPrice = cartDetails.reduce((total, item) => total + (item.quantity * item.price?.cost), 0);
 
     const productViewHandler = (productID) => {
         navigate("/product/view/" + productID)
@@ -104,7 +104,7 @@ const Cart = ({ setIsCartOpen }) => {
                                         {data.productName}
                                     </Typography>
                                     <Typography variant="subtitle2">
-                                        Original Price: Rs. {data.price.mrp}
+                                        Original Price: Rs. {data.price?.mrp}
                                     </Typography>
                                     <Typography variant="subtitle2">
                                         Discount: {data.price.discountPercent}% Off

@@ -3,15 +3,12 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-// import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-// import LocalMallIcon from "@mui/icons-material/LocalMall";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-// import { Login, Logout, Shop2, Store } from '@mui/icons-material';
 import { Logout, Shop2, Store } from "@mui/icons-material";
 
 import { Link, useNavigate } from "react-router-dom";
@@ -25,7 +22,6 @@ import {
 } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { styled } from "styled-components";
-// import { NavLogo } from "../utils/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 
 import Cart from "./customer/components/Cart";
@@ -48,7 +44,7 @@ const Navbar = () => {
     }
   }, [currentRole, currentUser, dispatch]);
 
-  // const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [anchorElSign, setAnchorElSign] = React.useState(null);
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
@@ -106,36 +102,6 @@ const Navbar = () => {
         <Toolbar disableGutters>
           <HomeWrapper>
             <div className="flex items-center justify-center gap-4">
-              {/* <HomeContainer>
-                <Typography
-                  variant="h6"
-                  noWrap
-                  sx={{
-                    mr: 2,
-                    display: { xs: "none", md: "flex" },
-                    fontFamily: "monospace",
-                    fontWeight: 700,
-                    letterSpacing: ".3rem",
-                    color: "inherit",
-                    textDecoration: "none",
-                  }}
-                >
-                  <NavLogo
-                    to="top"
-                    activeClass="active"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                    onClick={homeHandler}
-                  >
-                    <LocalMallIcon
-                      sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
-                    />
-                    6Lytes
-                  </NavLogo>
-                </Typography>
-              </HomeContainer> */}
               <div className="bg-red-400 p-1 rounded-lg">
                 <img
                   src="/six-lays.png"
@@ -154,32 +120,11 @@ const Navbar = () => {
                   aria-controls="menu-appbar"
                   aria-haspopup="true"
                   onClick={handleOpenDrawer}
-                  // color="#000"
                 >
-                  {/* <Typography variant="h6">Menu</Typography> */}
                   <MenuIcon />
                 </IconButton>
               </div>
             </div>
-
-            {/* <Typography
-              variant="h5"
-              noWrap
-              sx={{
-                display: { xs: "flex", md: "none" },
-                justifyContent: "center",
-                flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            >
-              6Lytes
-            </Typography> */}
-
-            {/* Removed IconButton for "products and categories" section */}
 
             <Box
               sx={{
@@ -205,10 +150,6 @@ const Navbar = () => {
                 </Link>
               </Button>
             </Box>
-            {/* menu */}
-            {/* <Box sx={{ flexGrow: 1,justifyContent:'center', display: { xs: 'flex', md: 'none' } }}>
-    
-                    </Box> */}
             <Drawer
               anchor="left"
               open={isDrawerOpen}
@@ -216,7 +157,6 @@ const Navbar = () => {
               sx={{ width: "33%" }}
             >
               <Box
-                // sx={{ width: 100 }}
                 role="presentation"
                 onClick={handleCloseDrawer}
                 onKeyDown={handleCloseDrawer}
@@ -247,7 +187,6 @@ const Navbar = () => {
                 </ListItem>
               </Box>
             </Drawer>
-            {/* end menu code */}
 
             {currentRole === null && (
               <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
@@ -400,14 +339,6 @@ const styles = {
     },
   },
 };
-
-// const HomeContainer = styled.div`
-//   display: flex;
-//    {
-//     /* justify-content: center;
-//   align-items: center; */
-//   }
-// `;
 
 const HomeWrapper = styled.div`
   display: flex;
