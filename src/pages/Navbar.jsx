@@ -215,15 +215,15 @@ const Navbar = () => {
                 >
                   <MenuItem onClick={() => navigate("/Customerlogin")}>
                     <Avatar />
-                    <Link to="/Customerlogin">Sign in as customer</Link>
+                    <Link to="/Customerlogin">Sign in</Link>
                   </MenuItem>
                   <Divider />
-                  <MenuItem onClick={() => navigate("/Sellerlogin")}>
+                  {/* <MenuItem onClick={() => navigate("/Sellerlogin")}>
                     <ListItemIcon>
                       <Store fontSize="small" />
                     </ListItemIcon>
                     <Link to="/Sellerlogin">Sign in as seller</Link>
-                  </MenuItem>
+                  </MenuItem> */}
                 </Menu>
               </Box>
             )}
