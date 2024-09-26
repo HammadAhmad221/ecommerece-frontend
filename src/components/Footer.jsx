@@ -117,7 +117,9 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-4">
         {/* First Section */}
         <div>
-          <h2 className="text-xl md:text-2xl font-bold mb-4">Join Our Newsletter</h2>
+          <h2 className="text-xl md:text-2xl font-bold mb-4">
+            Join Our Newsletter
+          </h2>
           <p className="mb-4">
             Subscribe to our newsletter and get the latest updates.
           </p>
@@ -151,7 +153,7 @@ const Footer = () => {
             <h2 className="text-xl md:text-2xl font-bold mb-4">Quick Links</h2>
             <ul>
               <li className="mb-2">
-                <a href="#!" className="hover:underline">
+                <a href="/about-us" className="hover:underline">
                   About Us
                 </a>
               </li>
@@ -161,7 +163,7 @@ const Footer = () => {
                 </a>
               </li>
               <li className="mb-2">
-                <a href="#!" className="hover:underline">
+                <a href="/faqs" className="hover:underline">
                   FAQ's
                 </a>
               </li>
@@ -171,12 +173,12 @@ const Footer = () => {
                 </a>
               </li>
               <li className="mb-2">
-                <a href="#!" className="hover:underline">
+                <a href="/privacypolicy" className="hover:underline">
                   Privacy Policy
                 </a>
               </li>
               <li className="mb-2">
-                <a href="#!" className="hover:underline">
+                <a href="/terms" className="hover:underline">
                   Terms and Conditions
                 </a>
               </li>
