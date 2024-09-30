@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../../components/Footer";
 
 const PrivacyPolicy = () => {
   return (
@@ -153,6 +154,7 @@ const PrivacyPolicy = () => {
         personal information with care and respect. Thank you for trusting
         6Lytes!
       </p>
+      <Footer />
     </div>
   );
 };

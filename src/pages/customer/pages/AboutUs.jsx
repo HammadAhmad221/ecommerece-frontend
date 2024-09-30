@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../../components/Footer";
 
 const AboutUs = () => {
   return (
@@ -62,6 +63,7 @@ const AboutUs = () => {
           limit to what you can achieve.
         </p>
       </section>
+      <Footer />
     </div>
   );
 };

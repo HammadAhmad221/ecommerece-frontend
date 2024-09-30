@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../../components/Footer";
 
 const TermsAndConditions = () => {
   return (
@@ -109,6 +110,7 @@ const TermsAndConditions = () => {
       </p>
 
       <p>Thank you for visiting 6Lytes!</p>
+      <Footer />
     </div>
   );
 };
